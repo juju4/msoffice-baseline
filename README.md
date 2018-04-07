@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/juju4/msoffice-baseline.svg?branch=master)](https://travis-ci.org/juju4/msoffice-baseline)
+
 msoffice-baseline
 ================
 
