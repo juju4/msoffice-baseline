@@ -128,11 +128,11 @@ if msoffice_present
     desc 'Disable legacy Equation Editor from MsOffice. Normally removed since CVE-2017-11882, jan 2018'
     ref url: 'https://embedi.com/blog/skeleton-closet-ms-office-vulnerability-you-didnt-know-about'
     ref url: 'https://support.microsoft.com/en-ca/help/4057882/error-when-editing-an-equation-in-office'
-    describe registry_key("HKLM\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Common\\COM Compatibility\\{0002CE02-0000- 0000-C000-000000000046}") do
+    describe registry_key("HKLM\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Common\\COM Compatibility\\{0002CE02-0000-0000-C000-000000000046}") do
       it { should exist }
       its('Compatibility Flags') { should eq 0x400 }
     end
-    describe registry_key("HKLM\\SOFTWARE\\Wow6432Node\\Microsoft\\Office\\#{msoffice_version}\\Common\\COM Compatibility\\{0002CE02-0000- 0000-C000-000000000046}") do
+    describe registry_key("HKLM\\SOFTWARE\\Wow6432Node\\Microsoft\\Office\\#{msoffice_version}\\Common\\COM Compatibility\\{0002CE02-0000-0000-C000-000000000046}") do
       it { should exist }
       its('Compatibility Flags') { should eq 0x400 }
     end
