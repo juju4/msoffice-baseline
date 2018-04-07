@@ -102,7 +102,7 @@ if msoffice_present
   control 'msoffice-dde-1' do
     impact 0.7
     title 'Disable DDE functions'
-    desc ''
+    desc 'Disable Dynamic Data Exchange (DDE) options in MsOffice'
     ref url: 'https://technet.microsoft.com/en-us/library/security/4053440'
     describe registry_key("HKCU\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Word\\Options") do
       it { should exist }
@@ -124,8 +124,8 @@ if msoffice_present
 
   control 'msoffice-4' do
     impact 0.7
-    title 'Disable Equation Editor - Normally removed since CVE-2017-11882'
-    desc ''
+    title 'Disable Equation Editor'
+    desc 'Disable legacy Equation Editor from MsOffice. Normally removed since CVE-2017-11882, jan 2018'
     ref url: 'https://embedi.com/blog/skeleton-closet-ms-office-vulnerability-you-didnt-know-about'
     ref url: 'https://support.microsoft.com/en-ca/help/4057882/error-when-editing-an-equation-in-office'
     describe registry_key("HKLM\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Common\\COM Compatibility\\{0002CE02-0000- 0000-C000-000000000046}") do
