@@ -1,0 +1,11 @@
+# encoding: utf-8
+
+name: msoffice-baseline
+title: MsOffice Security Baseline
+maintainer: juju4
+copyright: juju4
+license: BSD
+summary: Baseline for best-practice MsOffice hardening
+version: 0.8
+supports:
+  - os-family: windows
