@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 msoffice_present = attribute('msoffice_present', default: true, description: 'Should we control presence of Microsoft msoffice')
 msoffice_version = attribute('msoffice_version', default: '16.0', description: 'Which Microsoft msoffice version do we control?')
