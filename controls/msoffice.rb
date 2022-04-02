@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-msoffice_present = attribute('msoffice_present', default: true, description: 'Should we control presence of Microsoft msoffice')
-msoffice_version = attribute('msoffice_version', default: '16.0', description: 'Which Microsoft msoffice version do we control?')
-msoffice_vbawarnings = attribute('msoffice_vbawarnings', default: 3, description: 'Minimum level for vbawarnings')
+msoffice_present = input('msoffice_present', value: true, description: 'Should we control presence of Microsoft msoffice')
+msoffice_version = input('msoffice_version', value: '16.0', description: 'Which Microsoft msoffice version do we control?')
+msoffice_vbawarnings = input('msoffice_vbawarnings', value: 3, description: 'Minimum level for vbawarnings')
 
 if msoffice_present
   title 'Microsoft office'
